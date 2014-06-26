@@ -4,6 +4,8 @@ Glimpse is a computer program that can collect a sequence of video images from a
 
 Glimpse is written in National Instruments' LabVIEW graphical programming language, so it is easy to modify for particular applications.  It is open source software licensed under the GNU General Public License, version 3.
 
+I don't provide support for this software.  However, I would be grateful for reports of bugs in the software or for any improvements that others would like to contribute to the software.
+
 Author:
 Jeff Gelles;
 Department of Biochemistry, MS009;
