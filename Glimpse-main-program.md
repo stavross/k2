@@ -1,0 +1,1 @@
+The Glimpse Main Program is the GUI for viewing and workin with video data.
