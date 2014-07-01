@@ -1,11 +1,32 @@
+#####Version 53 - June 2014
+* Added/updated copyright text
+* Published on GitHub
+
+#####Version 52 – June 2013
+* `GPI-Join Sequences.vi`
+
+  1) added code to handle header2 data 
+
+  2) using millisecond ttb values instead of time of first frame values to set relative times of sequences
+
+* Updated project config
+* Updated GLIMPSE Sequence Player.vi to display header2 metadata if present
+* Glimpse Image Display Controller.vi preset values now saved in global between executions.
+* Made sure that info is being converted to correct data type in Write sequence info to MAT file.vi
+* Added stage xyz data to header2
+* Fixed Load/Save settings VI
+* Set up typedef so that we can eventually use I64 file pointers.
+
 #####Version 51 – September 2010 
 Revision:  238
 * Fixed broken 
 * Fixed bug in Join Sequences plug-in where it was saying that the output file had one more frame than it actually had.
 * Default file storage directory now is a subfolder with the name of the user (thanks Johnson!).
-
-#####Version 50 – September 2009 
-Revision: 170
+* Added slim executable installer
+* Switched to manually populated project.  Removed defunct build specifications.
+* Changed to GPL ver. 3 or higher
+* Updated join sequences plugin to be compatible with new file header parameter
+* Added end of last cycle time to `Video acquisition state.ctl`
 * Bug fix:  Merge sequences now handles timestamps properly.
 
 #####Version 49 – July 2009 
@@ -186,7 +207,7 @@ Internal features:
 
 #####Version 31 -- June 2003
 -- "Acquiring larger than 8-bit images" error message no longer erroneously appears when acquiring 8-bit images.  Duh.
--- Added AOI --> OR con#####Version to Extract 16-bit array from Image.vi.  The effect of this is to correct a bug where fits were to aois 1 pixel larger than specified.
+-- Added AOI --> OR conversion to Extract 16-bit array from Image.vi.  The effect of this is to correct a bug where fits were to aois 1 pixel larger than specified.
 -- Modified Fit AOIs to handle multple analysis procedures
 -- Modified Fit One AOI to take parameters as an array, not as a cluster, to allow for variable numbers of parameters
 -- Added AOI Stats analysis procedure to calculate aoi centroids, integrals, mins and maxs.
@@ -230,7 +251,7 @@ Internal features:
 --Added VCR batch queue vi.
 --Extensive mods to error handling and UI in VCR routines.
 --For many windows, closes the parent window while the child window is open to eliminate confusion about which window is active.
---Exit button in laucher now exits Labview
+--Exit button in launcher now exits Labview
 --Added about glimpse
 
 #####Version 25 -- February 2003
@@ -259,15 +280,15 @@ Internal features:
 ----added code to read TTB
 ----now displays file name and header info during read
 -- Save img now saves in tiff format as well; saves whole frames as well as aois
---add #####Version string to globals; display in splash screen and write this to seq files
---improved error handling throught.  some routines now use customized error handler to responde properly to user error codes (>5000).
+--add version string to globals; display in splash screen and write this to seq files
+--improved error handling throughout.  some routines now use customized error handler to responde properly to user error codes (>5000).
 --split fetch frame and fetch ttb value to improve seq save speed.
 --removed gallery button since that feature is not going to get implemented anytime soon.
 
 #####Version 23 -- September 2002
--- Derived directly from v. 21, but incorporated new "Get envirnoment variable.vi" from v.22.
--- Record sequece to disk:
----- Imporved error handling for file open etc.
+-- Derived directly from v. 21, but incorporated new "Get environment variable.vi" from v.22.
+-- Record sequence to disk:
+---- Improved error handling for file open etc.
 ---- New code for opening new or overwriting old files
 ---- improved code for detecting skipped frames
 ---- use new file for autostart
@@ -284,11 +305,12 @@ Internal features:
 #####Version 22 -- April 2002
 -- Last (?) non-disk-acquire version.
 -- Fixed some kind of problem with getting environment variable (username?).  Can't remember exactly what.
+
 #####Version 21 -- 
 -- Testing acquire to disk performance.  Never used in production.
 #####Version 20 -- March 2002
 -- Added batch digitize vi to automatically acquire a single sequence using VCR
--- Making production #####Version as .exe instead of .llb
+-- Making production version as .exe instead of .llb
 #####Version 19 -- March 2002
 -- Fixed problem with stop button in sequence player sometimes not working properly.
 -- "Fire up" and "initialize" windows position themselves in LR corner of screen.
@@ -300,22 +322,28 @@ Internal features:
 -- Changes window positions in sequence player
 -- Rewrote display/save averaged fields code (in fetch image vi) so that it does in fact actually do that.
 -- Cosmetic changes to window average vi.
+
 #####Version 16 -- June 2001
 -- Added vi to do temporal filtering on sequence in RAM. 
+
 #####Version 14 -- July 2000
 -- Corrected bug that mis-sized fixed size aois by 1 or 2 pixels.
 -- Made save seq save correct size aois instead of correct size - 1
+
 #####Version 13 -- Apr. 2000
 -- Option to save/display fields as well as frames
 -- Sequence player positions tool palette and deletes it when vi is closed
+
 #####Version 12 -- Sept. 1999
 -- Save sequence of tiff files fixed up, now handles aois.
 -- Initialization window now shows live video and you can specify the acquisition window using the mouse
 -- Tools window now is positioned properly relative to live video windows
+
 #####Version 11 -- Sept. 1999 (never released)
 -- Skipping frames during acquisition now works properly
 -- Removed some unused sub-vis from library
 -- Much better refresh rate in live video vi
+
 #####Version 10 -- Sept. 1999
 -- Redesigned acquisition to start and stop a small ring acquisition as needed.  
 -- Annoying waits to reset acquisition are gone. Initialization is much faster.
@@ -325,10 +353,13 @@ Internal features:
 -- Removed bug in set gain and offset.  Note that you can use the digital control to set offset > 10 if desired.
 -- Changed shortcut keys in player.
 -- Known bugs: sometimes you have to click the "stop" button several times to stop acquiring averaged frames.
+
 #####Version 9 -- Sept. 1999
 -- Set up to test splitting IMAQ start and stop routines.  This didn't work for stopping and restarting acquisition.  Never released.
+
 #####Version 8a -- Sept. 1999
 -- Updated to work with LV 5.1 and NI-IMAQ 2.2.  Required changing all IMAQ refnos to new format.
+
 #####Version 7 and 8
 -- porting intermediates; never functional
 
@@ -337,8 +368,9 @@ Internal features:
 -- Slight mod of get env. variable; seems to work better
 
 #####Version 5 -- May 1999
-- Incorporated JYs correted code for writing sequence files.  Previous versions occaisionally corrupted the last pixel on a line due to a problem with the implementation of the compression algorithm.
-- Read Seq added.  Known limitations: 1) uses memory in a very inefficient manner.  may run out of ram or run very slowly when large sequences are read.  2) does not read the time table, so if you resave a sequence loaded from the disk, the time information will be lost.  3) On one occzaision, I had a seq file which simply could not be read in.  Let me know if this happens to you.
+- Incorporated JYs correted code for writing sequence files.  Previous versions occasionally corrupted the last pixel on a line due to a problem with the implementation of the compression algorithm.
+- Read Seq added.  Known limitations: 1) uses memory in a very inefficient manner.  may run out of ram or run very slowly when large sequences are read.  2) does not read the time table, so if you resave a sequence loaded from the disk, the time information will be lost.  3) On one occasion, I had a seq file which simply could not be read in.  Let me know if this happens to you.
+
 #####Version 4 -- May 1999 (Never Released)
 - Add save sequence of tiff files (Wei)
 - Modify save img (JG)
