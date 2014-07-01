@@ -8,6 +8,7 @@ Software requirements:
 storage directory, e.g.,
 
 [RAID drive]
+
 Root path=d:\glimpse
 
 
