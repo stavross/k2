@@ -1,19 +1,15 @@
 #####Version 51 – September 2010 
 Revision:  238
-
 * Fixed broken 
 * Fixed bug in Join Sequences plug-in where it was saying that the output file had one more frame than it actually had.
 * Default file storage directory now is a subfolder with the name of the user (thanks Johnson!).
 
 #####Version 50 – September 2009 
 Revision: 170
-
 * Bug fix:  Merge sequences now handles timestamps properly.
-
 
 #####Version 49 – July 2009 
 Revision: 126
-
 * Can now read Glimpse format (.seq) movie files produced by Alex’s Matlab routine. (Glimpse set up to read sequence.vi uses the header.mat file if there is no header.glimpse file.)
 * New Join Sequences plug in will merge frames from 2 or more sequences in chronological order.
 * Video acquisition features are now plug-ins.  They are not in the default glimpse build but can be inserted.
@@ -23,7 +19,6 @@ Revision: 126
   * Fixed Glimpse.lvproj so builds will work
 * Developing particle tracking code but not yet finished
 * Changed execution systems to improve UI response: Glimpse Image Display Controller.vi - user interface
-
 
 #####Version 48 – April 2009
 * GLIMPSE Sequence Player now can play just a chosen field of view in movies that were made using the piezo stage to repeatedly image different fields. 
@@ -40,10 +35,10 @@ Revision: 126
 * Resolved obsolete references to old libraries
 * Completely re-worked Glimpse Plugin Handler.vi to make it compatible with the security restrictions in LV 8.  Works in both source and executable builds.  In source builds the plug-in list is assembled dynamically; in exe builds uses list hard coded into Glimpse plugin list plugins.vi
 * Changes to build/install scripts:
-1.	Added movie merge plug-in to tree.
-2.	new build targets: LLB, LLB installer
-3.	modified both installers to add labview hardware configuration.ini.default
-4.	The LLB installer does not work; this is a bug in LV 8.6: http://forums.ni.com/ni/board/message?board.id=170&thread.id=355968
+  1.	Added movie merge plug-in to tree.
+  2.	new build targets: LLB, LLB installer
+  3.	modified both installers to add labview hardware configuration.ini.default
+  4.	The LLB installer does not work; this is a bug in LV 8.6: http://forums.ni.com/ni/board/message?board.id=170&thread.id=355968
 
 #####Version 46 – August 2008
 * Now using LabView 8.5.1
@@ -56,14 +51,13 @@ Revision: 126
 * Sequence player:  Print image now works with 16-bit images; prints AOIs too, prints file name and black/white levels.
 
 #####Version 45 – August 2007
-
 * Port to LV 8.2.1.  Needs to be tested with acquisition plug ins.
 * Pending: add aoi overlay to sequence player/display controller
 * Pending: add print screen to aoi controller
 
 #####Version 44 – August 2007
-
 * Added ugly kludge to Acquire sequence of frames.vi to ensure that correct value of “Element 0 of TTB” gets stored in sequence header.  No idea why it isn’t working.
+
 #####Version 43 – June 2006
 * Glimpse write video header file.vi:   Starting frame number passed to Write sequence info to MAT file.vi is 0 instead of 1.
 * Write sequence info to MAT file.vi now saves image width and height
@@ -72,12 +66,14 @@ Revision: 126
 * Changed name of Fit Aois to Fit Aois.vi.  
 * Fixed Fit Aois.vi so that AOIs do not shrink if they run in to the edge of the frame
 * Fit Aois.vi outputs time stamp if no fit when “write record when no fit” is on.
+
 #####Version 42 – January 2006
 * Modified AOI to optional rectangle.vi to properly handle empty AOI parameter.  This was needed for compatibility with some plug-in code.
 * Cosmetic changes to splash screen.
 * Glimpse image display controller.vi:  Corrected to allow windows to initialize out of numerical order (useful for plug-ins).  Added some error handling.
 * Changed Glimpse IMAQ startup.vi so that it properly warns the user if an IMAQ board is not present.
 * Made MAT file output of glimpse.header information.
+
 #####Version 41 – January 2006
 * Included vision71rte.exe and lvruntimeeng.msi in the installer package with a batch file, GLIMPSEpost-install.bat, to execute the installers of the run-time engines and delete them after they’ve completed.
 * Exit from Front Panel now working properly.
@@ -88,31 +84,31 @@ Revision: 126
 * Global Plugin Handler included at the Glimpse front panel to run subroutines for additional functionality or hardware-specific processing.
 * Changed Get TTB value to correct bug that incorrectly calculated values for interlaced frames.
 * Included Movie Merge plugin for use with the Global Plugin Handler.
-#####Version 40 – August 2005
 
+#####Version 40 – August 2005
 * Glimpse display controller now saves settings to a global variable (this change allows plug-ins to react to user changes in display settings). 
 * Glimpse display controller now brings the currently adjusted window to the front.  It also has new momentary-action buttons for auto-scale, -size, and -position
 * Previous versions of Glimpse saved the time stamps for each frame of a TIFF stack in a separate MAT file, but did not read the time stamps back in when a TIFF stack was read.  This is now rectified.  To read in the time stamps, set Milliseconds per frame equal to zero in Glimpse Sequence Read.vi
-#####Version 39 – July 2005
 
+#####Version 39 – July 2005
 * In sequence player, added capability to simultaneously display multiple views of the same image with different gains/offsets.  
 * Updated Image display with gain offset so that all windows display scroll bars even when not autopositioned.
-* Fixed help files to remove links to external files.  Note that, depending on security settings, help may not display properly unless glimpse.llb (or .exe) and glimpse.chm are in the same directory under \program files
-#####Version 38 -- October 2004
+* Fixed help files to remove links to external files.  Note that, depending on security settings, help may not display properly unless glimpse.llb (or .exe) and glimpse.chm are in the same directory under \program files.
 
+#####Version 38 -- October 2004
 * Changed program so that sequences with > 32,767 frames would work properly in sequence player.  Went through numerous section of the program to make certain that frame numbers were always stored in a U32.  An exception is the SEQ format file reading and writing, which does not support sequences with more that 65,535 frames owing to a limitation in the format itself.
 * Fixed bug in image display gain-offset that sometimes prevented image displays from having scroll bars. 
-#####Version 37 -- September 2004
 
+#####Version 37 -- September 2004
 * Now works with LabView 7.1.  Note that IMAQ 3.0 is required.
 * In Glimpse window Average.vi:
   * Corrected bug that prevented 16-bit images with negative pixel values from averaging properly
   * Made "Stop" button functional even after avaraging has begun
   * Added option to use a jumping window instead of a sliding one.
 * Modified acquire to disk to better facilitate plug-ins that stop and restart aqcuisition.  Also made some minor changes along the same lines to Acquire Time Lapse.  Added documentation for both.
-* #####Version 37 was never formally released; video acquisition has not been extensively tested with this #####Version except for plug-ins.
-#####Version 36 -- August 2004
+* Version 37 was never formally released; video acquisition has not been extensively tested with this version except for plug-ins.
 
+#####Version 36 -- August 2004
 * There is now a help file, and many menus have context help.  Please tell Jeff what additional help needs to be added.
   * To see the context help window, press Ctrl-H OR click the yellow question mark toolbar button OR select Help>>Show Context Help.  The context help window shows help for whatever is under the cursor.  To show the context help for the whole menu, position the cursor on the menu icon in the upper right corner.
   * To view the help file, select Help>>Help for this VI OR click Click here for more help in the context help menu.
@@ -132,7 +128,7 @@ Revision: 126
   * in the Select AOIs window, and in the Tracking Results window, auto resizing is disabled after the first frame, so you may have to resize the window manually.
   * added adjustable scaling for the black/white level control
 * Both AVI and stacked TIFF output now produce a separate documentation file (in Matlab's MAT format).  The only contents of the file will be a structure named 'vid'.   Read the file using the Matlab 'load' command:
-
+```
 >> load 16.01.mat
 >> vid
 
@@ -145,12 +141,15 @@ vid =
           time1: 3.1555e+009
             ttb: [300 334 367 400 434]
           depth: 0
-
+```
 Notes on the elements of the structure:
 
 nframes -- number of frames in the movie
+
 time1 -- time of acquisition of the first frame in seconds from Jan 1, 1904
+
 ttb -- timestamps of  frames in milliseconds
+
 depth -- 0 <-> 8-bit; 1 <-> 16-bit
 
 Internal features:
