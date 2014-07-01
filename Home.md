@@ -6,7 +6,7 @@ Glimpse is written in National Instruments' LabVIEW graphical programming langua
 
 I don't provide support for this software.  However, I would be grateful for reports of bugs in the software or for any improvements that others would like to contribute to the software.
 
-Author:
+**Author**:
 Jeff Gelles;
 Department of Biochemistry, MS009;
 Brandeis University;
@@ -14,6 +14,6 @@ PO Box 549110;
 Waltham, MA 02454-9110;
 gelles@brandeis.edu
 
-Acknowledgements:  Thanks to Marc Bunin, Nick Farina, Wei Hua, Doug Martin, Serge, and Jim Yagmin, who  wrote some parts of this software.  Some parts of Glimpse development were funded by grants from NIGMS.
+**Acknowledgements**:  Thanks to Marc Bunin, Nick Farina, Wei Hua, Doug Martin, Serge, and Jim Yagmin, who  wrote some parts of this software.  Some parts of Glimpse development were funded by grants from NIGMS.
 
-Citation:  If you publish research that uses this software, you can cite https://github.com/gelles-brandeis/Glimpse 
+**Citation**:  If you publish research that uses this software, you can cite https://github.com/gelles-brandeis/Glimpse 
