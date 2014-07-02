@@ -129,26 +129,40 @@ Standard USB A/B
 NI-DAQmx
 
 #####Configuration of software
-See front panel of qpd config globals.vi
-Cable
-Custom shielded cable – see diagram.
-Notes
-We used a Pacific Silicon Sensors QP50-6-18u-SD2 in a custom enclosure with a generic +/- 12V power supply.  On another microscope we used the ThorLabs PDQ80A by throwing away their USB interface (feh!) and connecting the sensor to the NI USB6000.  This approach is more expensive but comes in an enclosure. See additional documentation.
-Quadrant photodiode – ThorLabs PDS80QS1 (USB)
-Defunct – This setup used the ThorLabs-provided  USB interface.  It never worked very well, probably because I had to kludge a driver that would work with Labview because Thorlabs doesn’t provide a Labview driver. Grrr.
-Additional software required 
+
+* Include `PP-NI quad photodiode` in project.
+* See front panel of `qpd config globals.vi`
+
+#####Cable
+Custom shielded cable – see [diagram](http://gelles-brandeis.github.io/Glimpse/newqpddocs.pdf).
+
+#####Notes
+We used a Pacific Silicon Sensors QP50-6-18u-SD2 in a custom enclosure with a generic +/- 12V power supply.  On another microscope we used the ThorLabs PDQ80A by throwing away their USB interface (feh!) and connecting the sensor to the NI USB6000.  This approach is more expensive but comes in a nifty rod-mount enclosure. 
+
+####Quadrant photodiode – ThorLabs PDS80QS1 (USB) *DEFUNCT*
+
+This setup used the ThorLabs-provided  USB interface.  It never worked very well, probably because I had to kludge a driver that would work with Labview because Thorlabs doesn’t provide a Labview driver. Grrr.
+
+#####Additional software required 
 Pds80qs1.dll (written by JG; must be in same directory as plug-in) and Thorlabs driver (install before plugging in detector).  As currently compiled, the dll requires that the MS visual C++ express compiler and the appropriate Windows SDK be installed on the target machine (i.e. the machine on which the dll is to be executed.  I’m assuming this requirement would go away if the dll were recompiled with the non-express version of the compiler, but I haven’t tried this.
-Configuration of software
-Cable
-Notes
-Piezo stage -- Mad City Labs, NI-DIO-96 (PCI)
-Additional software required 
+
+####Piezo stage -- Mad City Labs, NI-DIO-96 (PCI)
+
+#####Additional software required 
+
 NI-DAQmx
-Configuration of software
-Edit device name/port number in Nano-drive set using NI.vi
-Cable
+
+#####Configuration of software
+
+* Include `TTL Mad city stage` in project
+
+* Edit device name/port number in `Nano-drive set using NI.vi`
+
+#####Cable
+
 Supplied by mfr.
-Notes 
+
+#####Notes 
 Piezo stage -- Mad City Labs Nanodrive (USB)
 Additional software required 
 Mad City Labs driver and DLLs Madlib.dll and wdapi1010.dll (installed in C:\Program Files (x86)\Gelles Lab Software)
