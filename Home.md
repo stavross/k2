@@ -14,6 +14,6 @@ PO Box 549110;
 Waltham, MA 02454-9110;
 gelles@brandeis.edu
 
-**Acknowledgements**:  Thanks to Marc Bunin, Nick Farina, Wei Hua, Doug Martin, Serge, and Jim Yagmin, who  wrote some parts of this software.  Some parts of Glimpse development were funded by grants from NIGMS.
+**Acknowledgements**:  Thanks to Marc Bunin, Nick Farina, Wei Hua, Doug Martin, Serge, and Jim Yagmin, who  wrote some parts of this software.  Some parts of Glimpse development were funded by grants from [NIGMS](http://www.nigms.nih.gov).
 
 **Citation**:  If you publish research that uses this software, you can cite https://github.com/gelles-brandeis/Glimpse 
