@@ -80,7 +80,7 @@ Three knobs to control stage x-y-z.  We used three [Phidgets 1052 encoder/pushbu
 #####Configuration of software
 * Include `phidgets knobs` in project.
 
-*Set the serial numbers of the three knobs as default in `<microscope name>\knob globals.vi`.
+* Set the serial numbers of the three knobs as default in `<microscope name>\knob globals.vi`.
 
 ####Shutter controller - NI-DIO-96 card (PCI)
 On h-nu, the shutters are connected to a NI PCI-DIO-96 board which is also used to run the stage.  The actual shutter controllers are commercial Uniblitz boxes or home-built ones that take a TTL input from the DIO lines.
@@ -89,34 +89,46 @@ On h-nu, the shutters are connected to a NI PCI-DIO-96 board which is also used 
 NI-DAQmx
 
 #####Configuration of software
-* Include `h-nu shutters` in project.
+* Include `h-nu shutters` and, e.g., `h-nu-ixon` in project.
 
 * Edit laser `type.ctt` to specify names of lasers. If you want to change the number of lasers, you also have to edit `shutters activate.vi`.
 
 * Modfy `shutter port lookup.vi` to specify device name and port number of DIO card for each laser.
 
 #####Cable
+
 This table gives the h-nu wiring:
-Breakout box output	Pin number on 2nd ribbon cable	Port number on PCI-DIO-96	Line number on PCI-DIO-96	Shutter controller	Shutter
-1	23	7	4	--	Camera
-2	24	10	4		Orange Laser (594 nm)
-3	31	7	0		IR laser (785 nm)
-4	32	10	0	4	blue laser (488 nm)
-5	15	8	0	5	green (532 nm)
-6	16	11	0	6	Red (633)
-Shutter controller - NI USB6008 (USB)
+
+|Breakout box output|Pin number on 2nd ribbon cable|Port number on PCI-DIO-96|Line number on PCI-DIO-96|Shutter controller|Shutter|
+|----|----|----|----|----|----|
+|1|23|7|4| -- |Camera|
+|2	|24	|10	|4	|	|orange Laser (594 nm)|
+|3	|31	|7	|0	|	|IR laser (785 nm)|
+|4	|32	|10	|0	|4	|blue laser (488 nm)|
+|5|15	|8	|0	|5	|green laser (532 nm)|
+|6	|16	|11	|0	|6	|red laser (633)|
+
+####Shutter controller - NI USB6008 (USB)
 On new-h-nu, the shutters are connected to an NI USB6008. The actual shutter controllers are home-built ones that take a TTL input from the DIO lines.
-Additional software required
+
+#####Additional software required
 NI-DAQmx
-Configuration of software
-Edit laser type.ctt to specify names of lasers.  If you want to change the number of lasers, you also have to edit shutters activate.vi.
-Modfy shutter port lookup.vi to specify device name and port number of DIO card for each laser.
-Cable
+
+#####Configuration of software
+* Include `new-h-nu shutters` and, e.g., `new-h-nu-ixon` in project.
+
+* Edit laser `type.ctt` to specify names of lasers. If you want to change the number of lasers, you also have to edit `shutters activate.vi`.
+
+* Modfy `shutter port lookup.vi` to specify device name and port number of DIO card for each laser.
+######Cable
 Standard USB A/B
-Quadrant photodiode – NI USB6008 (USB)
-Additional software required
+
+####Quadrant photodiode – NI USB6008 (USB)
+
+#####Additional software required
 NI-DAQmx
-Configuration of software
+
+#####Configuration of software
 See front panel of qpd config globals.vi
 Cable
 Custom shielded cable – see diagram.
