@@ -57,6 +57,10 @@ Mfr.-supplied DB-9/DB-9 cable.
 
 This device also has a USB interface, but I wasn’t able to figure out how to get it to work with Labview.  Instead we use the NI four serial ports <-> USB box.
 
+####Fluid handling system
+
+We have custom-built fluid-handling systems that each use a Hamilton MVP valve (RS-232) and a Harvard Instruments syringe pump.
+
 ####Knobs -- Griffin Powermate knobs (USB) DEFUNCT
 
 Two knobs to control stage x-y-z
@@ -162,23 +166,13 @@ NI-DAQmx
 
 Supplied by mfr.
 
-#####Notes 
-Piezo stage -- Mad City Labs Nanodrive (USB)
-Additional software required 
-Mad City Labs driver and DLLs Madlib.dll and wdapi1010.dll (installed in C:\Program Files (x86)\Gelles Lab Software)
-Configuration of software
-None.
-Notes 
+####Piezo stage -- Mad City Labs Nanodrive (USB)
 
-Valve – Hamilton MVP (RS-232)
-Additional software required 
-Configuration of software
-Notes 
-Cable and software protocol described in mfr’s manual.
+#####Additional software required 
 
-Additional software required 
-Configuration of software
-Cable
-Notes 
+Mad City Labs driver and DLLs `Madlib.dll` and `wdapi1010.dll` (installed in C:\Program Files (x86)\Gelles Lab Software)
 
+#####Configuration of software
+
+Include `TTL Mad city stage` in project
 
