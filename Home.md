@@ -16,4 +16,4 @@ gelles@brandeis.edu
 
 **Acknowledgements**:  Thanks to Marc Bunin, Nick Farina, Wei Hua, Doug Martin, Serge, and Jim Yagmin, who  wrote some parts of this software.  Some parts of Glimpse development were funded by grants from [NIGMS](http://www.nigms.nih.gov).
 
-**Citation**:  If you publish research that uses this software, you can cite https://github.com/gelles-brandeis/Glimpse or ![10.5281/zenodo.10846](https://zenodo.org/badge/doi/10.5281/zenodo.10846.png)
+**Citation**:  If you publish research that uses this software, you can cite https://github.com/gelles-brandeis/Glimpse or ![10.5281/zenodo.10846](https://zenodo.org/badge/doi/10.5281/zenodo.10846.png).
