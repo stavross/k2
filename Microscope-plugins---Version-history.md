@@ -2,8 +2,9 @@
 * Multi-round autofocus:  Added code to RR autofocus to make multiple attempts at autofocus if
 current position is more than a set threshold away from focus point.
 * Sync/async autofocus: Added separate top-level VI that opetionally can be used to autofocus periodically regardless of acquisition state.  Also added code so that synchronous autofocus in preview and acquisition
-is turned off when aynchronous autofocus is running. 
-* Added control for number of acquisition files to front panel of multimode acquisition.vi
+is turned off when aynchronous autofocus is running. (Synchronous will resume when asynchronous is turned off, even in the middle of a run)
+* New front panel control in multi-mode acquisition to set number of acquisition files to create.  Preview window now shows total number of frames/total time that can be collected with current settings.
+* Created new-hnu branch to hold current version of software for new h nu microscope
 
 #####Version 29 -- July 2014
 * Published on GitHub
