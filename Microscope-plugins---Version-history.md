@@ -1,5 +1,12 @@
+#####Version 30 -- In progress
+* Multi-round autofocus:  Added code to RR autofocus to make multiple attempts at autofocus if
+current position is more than a set threshold away from focus point.
+* Sync/async autofocus: Added separate top-level VI that opetionally can be used to autofocus periodically regardless of acquisition state.  Also added code so that synchronous autofocus in preview and acquisition
+is turned off when aynchronous autofocus is running. 
+* Added control for number of acquisition files to front panel of multimode acquisition.vi
+
 #####Version 29 -- July 2014
-* Publised on GitHub
+* Published on GitHub
 * Added copyright/license info
 * Stripped out defunct code
 * Removed Roper camera support (at least for now)
