@@ -1,4 +1,4 @@
-#####Version 30 -- In progress
+#####Version 30 -- December 2014
 * Multi-round autofocus:  Added code to RR autofocus to make multiple attempts at autofocus if
 current position is more than a set threshold away from focus point.
 * Sync/async autofocus: Added separate top-level VI that opetionally can be used to autofocus periodically regardless of acquisition state.  Also added code so that synchronous autofocus in preview and acquisition
