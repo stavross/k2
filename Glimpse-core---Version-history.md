@@ -1,5 +1,5 @@
 #####Version 54 - Jan 2015
-* Corrected bug that prevented saving long files (>2Gb) of 16-bit images in Glimpse core/Seq file v 1/Frames per axquisition file.vi 
+* Corrected bug that prevented saving long files (>2Gb) of 16-bit images in `Glimpse core/Seq file v 1/Frames per axquisition file.vi` 
 
 #####Version 53 - June 2014
 * Added/updated copyright text
